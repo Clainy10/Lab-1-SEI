@@ -3,12 +3,12 @@
 
 #define BUTTON_PIN 2
 
-void DD_Button_Init(void)
+void dd_button_init(void)
 {
     pinMode(BUTTON_PIN, INPUT_PULLUP);
 }
 
-uint8_t DD_Button_Read(void)
+uint8_t dd_button_read(void)
 {
     return (digitalRead(BUTTON_PIN) == LOW);
 }

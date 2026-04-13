@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-void DD_Button_Init(void);
-uint8_t DD_Button_Read(void);
+void dd_button_init(void);
+uint8_t dd_button_read(void);
 
 #endif
