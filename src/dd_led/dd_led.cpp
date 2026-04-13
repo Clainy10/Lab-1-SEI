@@ -31,12 +31,11 @@ void dd_led_off(uint8_t led_id)
     }
 }
 
-void dd_led_toggle(uint8_t led_id, int delay_ms)
+void dd_led_toggle(uint8_t led_id)
 {
     if (led_id < LED_COUNT)
     {
         digitalWrite(led_pins[led_id], !digitalRead(led_pins[led_id]));
-        delay(delay_ms);
     }
 }
 

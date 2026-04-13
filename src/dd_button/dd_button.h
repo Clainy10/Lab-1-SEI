@@ -4,6 +4,6 @@
 #include <stdint.h>
 
 void dd_button_init(void);
-uint8_t dd_button_read(void);
+uint8_t dd_button_pressed(uint8_t button_id);
 
 #endif
