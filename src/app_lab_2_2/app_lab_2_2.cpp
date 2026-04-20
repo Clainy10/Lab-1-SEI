@@ -7,19 +7,6 @@
 #include "Arduino_FreeRTOS.h"
 
 
-#define TASK_1_RECURRENCE 10 / portTICK_PERIOD_MS
-#define TASK_1_OFFSET 100 / portTICK_PERIOD_MS
-
-#define TASK_2_RECURRENCE 10 / portTICK_PERIOD_MS
-#define TASK_2_OFFSET 105 / portTICK_PERIOD_MS
-
-#define TASK_3_RECURRENCE 10 / portTICK_PERIOD_MS
-#define TASK_3_OFFSET 110 / portTICK_PERIOD_MS
-
-
-
-
-
 
 
 

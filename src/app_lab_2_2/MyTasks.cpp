@@ -106,7 +106,7 @@ void task_3(void *pvParameters)
   {
     int data;
 
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    vTaskDelay(ONE_SECOND / portTICK_PERIOD_MS);
 
     while(xQueueReceive(xQueue, &data, 200 / portTICK_PERIOD_MS) == pdTRUE)
     {
