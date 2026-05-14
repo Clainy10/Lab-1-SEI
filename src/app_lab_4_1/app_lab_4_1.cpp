@@ -47,7 +47,7 @@ void app_lab_4_1_setup(void) {
     keypad_stdio_setup();
     
     printf(CMD_CLEAR_LCD);
-    printf("Relay System\r\nReady...\r\n");
+    printf("Relay System\r\n");
     reset_input_state();
 }
 
