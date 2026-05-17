@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 // Definiții pini
-#define L298_ENA  9  // Pin PWM
-#define L298_IN1  7  
-#define L298_IN2  8  
+#define L298_ENA  2  // Pin PWM analog
+#define L298_IN1  15 
+#define L298_IN2  16 
 
 static int16_t current_power = 0;
 
