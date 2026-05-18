@@ -19,7 +19,7 @@ static void reset_input_state(void) {
 static void report_system_status(void) {
     int16_t pwr = dd_l298_get_power();
 
-    printf("=== CONTROL MOTOR VIA SERIAL ===\r\n");
+    printf("Procces\r\n");
     if (pwr == 0) {
         printf("Status: STOP,  Putere: 0%%\r\n");
     } else {

@@ -86,6 +86,13 @@
       "top": -32.4,
       "left": 541.4,
       "attrs": { "color": "limegreen", "flip": "1" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 19.5,
+      "left": 465,
+      "attrs": { "temperature": "40.9" }
     }
   ],
   "connections": [
@@ -123,7 +130,10 @@
     [ "relay1:NO", "led4:A", "green", [ "v27", "h39.6" ] ],
     [ "mega:GND.5", "led4:C", "black", [ "v0.95", "h189.4" ] ],
     [ "led4:C", "led2:C", "black", [ "h19.2", "v-67.2" ] ],
-    [ "mega:5V.2", "relay1:COM", "red", [ "v-8.6", "h160.6", "v-28.8" ] ]
+    [ "mega:5V.2", "relay1:COM", "red", [ "v-8.6", "h160.6", "v-28.8" ] ],
+    [ "dht1:GND", "mega:GND.5", "black", [ "v0" ] ],
+    [ "dht1:VCC", "mega:5V.2", "red", [ "v9.6", "h-19.2", "v-134.4" ] ],
+    [ "mega:14", "dht1:SDA", "blue", [ "v19.2", "h174.7", "v124.8", "h38.3" ] ]
   ],
   "dependencies": {}
 }

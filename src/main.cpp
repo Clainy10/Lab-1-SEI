@@ -7,13 +7,15 @@
 #include "app_lab_3_2/app_lab_3_2.h"
 #include "app_lab_4_1/app_lab_4_1.h"
 #include "app_lab_4_2/app_lab_4_2.h"
+#include "app_lab_5_1/app_lab_5_1.h"
+// #include "app_lab_5_2/app_lab_5_2.h"
 
 void setup()
 {
-    app_lab_4_2_setup();
+    app_lab_5_1_setup();
 }
 
 void loop()
 {
-    app_lab_4_2_run();
+    app_lab_5_1_run();
 }

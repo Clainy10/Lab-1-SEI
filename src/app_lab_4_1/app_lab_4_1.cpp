@@ -14,17 +14,12 @@
 static char cmd_buffer[BUF_SIZE];
 static int cmd_idx = 0;
 
-/**
- * Șterge buffer-ul și resetează indexul.
- */
+
 static void reset_input_state(void) {
     cmd_idx = 0;
     memset(cmd_buffer, 0, BUF_SIZE);
 }
 
-/**
- * Procesează comanda acumulată în buffer.
- */
 static void process_relay_command(void) {
     printf(CMD_CLEAR_LCD); // Clear LCD înainte de afișarea rezultatului
 

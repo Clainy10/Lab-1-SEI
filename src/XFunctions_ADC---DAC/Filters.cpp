@@ -92,3 +92,19 @@ float filter_adc_VoltageToTemperature(float voltage, float vRef, float seriesRes
     return temperatureKelvin - 273.15f;
 }
 
+bool apply_hysteresis(float current_val, float set_point, float hysteresis_band, bool previous_state) {
+    float upper_threshold = set_point + hysteresis_band;
+    float lower_threshold = set_point - hysteresis_band;
+
+    // Peste pragul superior -> Oprim obligatoriu (OFF)
+    if (current_val >= upper_threshold) {
+        return false; 
+    }
+    // Sub pragul inferior -> Pornim obligatoriu (ON)
+    else if (current_val <= lower_threshold) {
+        return true;
+    }
+    
+    // Între praguri -> Păstrăm starea precedentă (Efectul de memorie/histereză)
+    return previous_state;
+}

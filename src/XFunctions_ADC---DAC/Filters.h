@@ -11,5 +11,6 @@ float filter_adcToVoltage(float rawValue, float vRef, float adcResolution);
 float filter_linearSensorConversion(float voltage, float slope, float offset);
 float filter_adc_ToPhysical(float rawValue, float vRef, float adcResolution, float slope, float offset);
 float filter_adc_VoltageToTemperature(float voltage, float vRef, float seriesResistor, float r25, float beta);
+bool apply_hysteresis(float current_val, float set_point, float hysteresis_band, bool previous_state);
 
 #endif // FILTERS_H
