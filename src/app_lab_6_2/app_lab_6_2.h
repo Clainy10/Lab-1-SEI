@@ -1,14 +1,17 @@
-#ifndef APP_LAB_6_1_H
-#define APP_LAB_6_1_H
+#ifndef APP_LAB_6_2_H
+#define APP_LAB_6_2_H
 
-// Application Specific States
-#define STATE_OFF 0
-#define STATE_ON  1
+// Stările clare ale intersecției (Combinații de culori pentru ambele direcții)
+#define STATE_EAST_GREEN_NORTH_RED    0
+#define STATE_EAST_YELLOW_NORTH_RED   1
+#define STATE_EAST_RED_NORTH_GREEN    2
+#define STATE_EAST_RED_NORTH_YELLOW   3
 
-// Application Specific Events
-#define EVENT_BUTTON_PRESSED 1
+// Evenimentele care forțează tranzițiile
+#define EVENT_TRAFFIC_REQUEST         1  // S-a detectat mașină la Nord
+#define EVENT_STEP_SEQUENCE           2  // Trecerea la următorul pas din secvență
 
-void app_lab_6_1_setup(void);
-void app_lab_6_1_run(void);
+void app_lab_6_2_setup(void);
+void app_lab_6_2_run(void);
 
 #endif

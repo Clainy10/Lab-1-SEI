@@ -17,12 +17,12 @@ static fsm_t led_fsm;
 // ============================================================================
 static void state_action_off(void) {
     dd_led_off(LED_GREEN);
-    printf("\r\n[FSM] -> Switched to STATE_OFF. LED is now OFF and stable.\r\n");
+    printf("\r\nSTATE: STATE_OFF.\r\n");
 }
 
 static void state_action_on(void) {
     dd_led_on(LED_GREEN);
-    printf("\r\n[FSM] -> Switched to STATE_ON. LED is now ON and stable.\r\n");
+    printf("\r\nSTATE: STATE_ON.\r\n");
 }
 
 // ============================================================================
@@ -52,8 +52,8 @@ void app_lab_6_1_setup(void) {
     // Inițializăm FSM-ul cu tabelul nostru pur de valori
     fsm_init(&led_fsm, STATE_OFF, lab_transition_table, TRANSITIONS_COUNT);
     
-    printf("\r\n=== TRUE FINITE STATE MACHINE INITIALIZED ===\r\n");
-    printf("[System] Ready. Initial State: STATE_OFF\r\n");
+    printf("\r\n=== FSM ===\r\n");
+    printf("Initial State: STATE_OFF\r\n");
 }
 
 void app_lab_6_1_run(void) {
